@@ -14,9 +14,10 @@ These functions are generally implemented and available in most browsers.
 ## How it Works
 
 * The `Custom Elements` is used to create the Custom component's fully valid HTML tag.
+    > **Note:** The custom name **must contain a *dash* (-)** (E.g: `custom-element`).
 
 * The `Shadow Dom` isolates the `Custom Elements` tag from other elements.
-    >isolation works like `<iframe>`.
+    > **Note:** The Isolation works similar to `<iframe>`.
 
 * The `Html templates` are used for the giving the functionality, styling to the `Custom Elements`.
 
