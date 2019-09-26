@@ -1,5 +1,5 @@
 # **WebComponents**
-Working Examples, Snippets and Exploration of WebComponents.
+Working Examples, Snippets, Collections and Exploration of WebComponents.
 
 ## Requirements
 The web components consists of *three* main technologies, which can be used together to create versatile custom elements with encapsulated functionality that can be reused wherever you like without fear of code collisions.
