@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CUSTOM WEB COMPONENTS DEMO</title>
+</head>
+
+<body>
+    <!-- template is used to store the custom elements content in HTML node format-->
+    <template id='tempCustom'>
+        <style>
+            h1 {
+                color: brown;
+            }
+        </style>
+        <h1>This H1 is inside custom element in shadowDOM</h1>
+    </template>
+
+    <my-custom-element></my-custom-element>
+    <h1>This H1 from outside of custom element and is not affected by style in shadowDom</h1>
+
+    <script>
+        customElements.define('my-custom-element',
+            class element extends HTMLElement {
+                constructor() {
+                    super();
+                    const template = document.getElementById('tempCustom')
+                    const templateClone = document.importNode(template.content, true);
+
+                    this.createShadowRoot().appendChild(templateClone);
+                }
+            })
+    </script>
+</body>
+
+</html>
